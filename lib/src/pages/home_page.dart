@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget{
-
+  //Estilo de letra
+  
+  final estiloTexto =  TextStyle(fontSize: 25.0);
+  int conteo = 10;
   @override
   Widget build(BuildContext context) {
 
-    //Estilo de letra
-    final estiloTexto =  TextStyle(fontSize: 25.0);
-
+    
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
@@ -22,10 +23,17 @@ class HomePage extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,//Para saber como queremos ubicar los widgets
           children: <Widget>[
             Text('Número de clicks:', style: estiloTexto,),
-            Text('0', style: estiloTexto,)
+            Text( '$conteo', style: estiloTexto,)
           ],
         )
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () { // Función anonima
+          conteo = conteo + 1;
+        },
+        child: Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
