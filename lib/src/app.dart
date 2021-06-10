@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 //Mis imports
-import 'pages/home_page.dart';
 import 'pages/contador_page.dart';
 class MyApp extends StatelessWidget{
   //Es un metodo para construir el widget
